@@ -6,6 +6,9 @@ COPY . .
 
 RUN mkdir _site
 
+# RUN gem install bundler:1.17.2
+RUN bundle update --bundler
+
 RUN jekyll build
 
 FROM nginx:alpine
